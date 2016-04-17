@@ -6,7 +6,7 @@ end
 result = eval(input)
 
 if result.to_s.include? '.0'
-	result = "%.0f" % result
+	result = result.floor
 end
 
 print result

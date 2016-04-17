@@ -1,10 +1,10 @@
 
-Given(/^the input "([^"]*)"$/) do |arg1|
-  @input = arg1
+Given(/^the expression "([^"]*)"$/) do |expression|
+  @expression = expression
 end
 
 When(/^the calculator is run$/) do
-  @output = `ruby app/calc.rb #{@input}`
+  @output = `ruby app/calc.rb #{@expression}`
   raise ('Command Failed') unless $?.success?
 end
 
